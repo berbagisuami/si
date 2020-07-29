@@ -5587,7 +5587,7 @@ function nav(path) {
   });
   html += `</select>`;
 //sig edit jadi root html += `<a href="/${cur}:/" class="mdui-typo-headline folder">${document.siteName}</a>`;  
-html += `<br><a href="/${cur}:/" class="mdui-typo-headline folder">root</a>`;
+html += `<a href="/${cur}:/" class="mdui-typo-headline folder">root</a>`;
   if (!model.is_search_page) {
     var arr = path.trim("/").split("/");
     var p = "/";
