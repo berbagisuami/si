@@ -136,7 +136,7 @@ function nav(path) {
   });
   html += `</select>`;
 
-  // sig edit jadi root dan pindah baris --> html += `<a href="/${cur}:/" class="mdui-typo-headline folder">${document.siteName}</a>`;
+  // sig edit jadi root dan pindah baris --> html += `<a href="/${cur}:/" class="mdui-typo-headline folder">${document.siteName}</a>`
   html += <br>`<a href="/${cur}:/" class="mdui-typo-headline folder">Root</a>`;
   if (!model.is_search_page) {
     var arr = path.trim('/').split('/');
