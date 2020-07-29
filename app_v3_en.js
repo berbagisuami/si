@@ -107,7 +107,7 @@ function title(path) {
   path = path.replace(`/${cur}:`, '');
   // $('title').html(document.siteName + ' - ' + path);
   var model = window.MODEL;
-  if (model.is_search_page)
+  if (model.is_search_page
     $('title').html(`${document.siteName} - ${drive_name} - 搜索 ${model.q} 的结果`);
   else
     $('title').html(`${document.siteName} - ${drive_name} - ${path}`);
@@ -136,8 +136,8 @@ function nav(path) {
   });
   html += `</select>`;
 
-  // sig edit jadi root dan pindah baris --> html += `<a href="/${cur}:/" class="mdui-typo-headline folder">${document.siteName}</a>`
-  html += <br>`<a href="/${cur}:/" class="mdui-typo-headline folder">Root</a>`;
+  // sig edit jadi root
+  html += `<a href="/${cur}:/" class="mdui-typo-headline folder">Root</a>`;
   if (!model.is_search_page) {
     var arr = path.trim('/').split('/');
     var p = '/';
