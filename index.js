@@ -1,4 +1,4 @@
-const authConfig = {
+﻿const authConfig = {
   "siteName": "Drive Index", 
   "siteIcon": "",
   "version": "_4.28",
@@ -46,7 +46,7 @@ const uiConfig = {
   "main_color": "blue-grey",
   "accent_color": "blue",
   "fluid_navigation_bar": true,
-  "avatar": "https://i.ibb.co/DwMwdFv/photo-2020-05-25-22-58-28.jpg",
+  "avatar": "https://2.bp.blogspot.com/-gJlEIpjU07I/XyETs53GM8I/AAAAAAAACVc/3J1wq4JcTxkZyEvupQJpFbB8OzgK2vpOwCLcBGAsYHQ/s320/logo2.png",
   "disable_navicon": true
 };
 
