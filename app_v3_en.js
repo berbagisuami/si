@@ -5479,10 +5479,10 @@
   );
 });
 document.write(
-  '<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/berbagisuami/si@master/mdui_v2.min.css">'
+  '<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/berbagisuami/si@master/css/mdui_v2.min.css">'
 );
 document.write(
-  '<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/berbagisuami/si@master/nexmoe_v2.min.css">'
+  '<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/berbagisuami/si@master/css/nexmoe_v2.min.css">'
 );
 document.write(
   '<script src="//cdn.jsdelivr.net/gh/5MayRain/goIndex-theme-nexmoe@1.1.3/js/mdui.min.js"></script>'
