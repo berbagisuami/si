@@ -5587,7 +5587,7 @@ function nav(path) {
   });
   html += `</select>`;
 //sig edit jadi root html += `<a href="/${cur}:/" class="mdui-typo-headline folder">${document.siteName}</a>`;  
-html += `<a href="/${cur}:/" class="mdui-typo-headline folder">/</a>`;
+/*html += `<a href="/${cur}:/" class="mdui-typo-headline folder">/</a>`;
   if (!model.is_search_page) {
     var arr = path.trim("/").split("/");
     var p = "/";
@@ -5604,6 +5604,7 @@ html += `<a href="/${cur}:/" class="mdui-typo-headline folder">/</a>`;
       }
     }
   }
+  */
   var search_text = model.is_search_page ? model.q || "" : "";
   const isMobile = Os.isMobile;
   var search_bar = `<div class="mdui-toolbar-spacer"></div>
