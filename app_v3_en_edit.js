@@ -5527,7 +5527,7 @@ function init() {
 <div class="mdui-container">
 	<div class="mdui-container-fluid">
 		<div id="nav" class="mdui-toolbar nexmoe-item nav-style"> </div>
-		<div id="nav" class="mdui-toolbar nexmoe-item nav-style"> </div>
+		<div id="nav2" class="mdui-toolbar nexmoe-item nav-style"> </div>
     </div>
 	<div class="mdui-container-fluid">
 		<div id="head_md" class="mdui-typo nexmoe-item" style="display:none;padding: 20px 0;"></div>
