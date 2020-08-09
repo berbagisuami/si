@@ -5676,7 +5676,7 @@ html += `<a href="/${cur}:/" class="mdui-typo-headline folder">/</a>`;
   if (model.root_type < 2) {
     html += search_bar;
   }
-  $("#nav").html(html);
+  $("#nav2").html(html);
   mdui.mutation();
   mdui.updateTextFields();
 }
