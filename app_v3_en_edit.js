@@ -5627,6 +5627,60 @@ function nav(path) {
   mdui.mutation();
   mdui.updateTextFields();
 }
+
+function nav2(path) {
+  var model = window.MODEL;
+  var html = "";
+  var cur = window.current_drive_order || 0;
+  var names = window.drive_names;
+  html += `<select class="mdui-select" onchange="window.location.href=this.value" mdui-select style="overflow:visible;">`;
+  names.forEach((name, idx) => {
+    html += `<option value="/${idx}:/"  ${
+      idx === cur ? 'selected="selected"' : ""
+    } >${name}</option>`;
+  });
+  html += `</select>`;
+//sig edit jadi root html += `<a href="/${cur}:/" class="mdui-typo-headline folder">${document.siteName}</a>`;  
+html += `<a href="/${cur}:/" class="mdui-typo-headline folder">/</a>`;
+  if (!model.is_search_page) {
+    var arr = path.trim("/").split("/");
+    var p = "/";
+    if (arr.length > 1) {
+      arr.shift();
+      for (i in arr) {
+        var n = arr[i];
+        n = decodeURI(n);
+        p += n + "/";
+        if (n == "") {
+          break;
+        }
+        html += `<i class="mdui-icon material-icons mdui-icon-dark folder" style="margin:0;">chevron_right</i><a class="folder" href="/${cur}:${p}">${n}</a>`;
+      }
+    }
+  }
+
+  var search_text = model.is_search_page ? model.q || "" : "";
+  const isMobile = Os.isMobile;
+  var search_bar = `<div class="mdui-toolbar-spacer"></div>
+        <div id="search_bar" class="mdui-textfield mdui-textfield-expandable mdui-float-right ${
+          model.is_search_page ? "mdui-textfield-expanded" : ""
+        }" style="max-width:${isMobile ? 300 : 400}px">
+            <button class="mdui-textfield-icon mdui-btn mdui-btn-icon" onclick="if($('#search_bar').hasClass('mdui-textfield-expanded') && $('#search_bar_form>input').val()) $('#search_bar_form').submit();">
+                <i class="mdui-icon material-icons">search</i>
+            </button>
+            <form id="search_bar_form" method="get" action="/${cur}:search">
+            <input class="mdui-textfield-input" type="text" name="q" placeholder="Search in current drive" value="${search_text}"/>
+            </form>
+            <button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">close</i></button>
+        </div>`;
+  if (model.root_type < 2) {
+    html += search_bar;
+  }
+  $("#nav").html(html);
+  mdui.mutation();
+  mdui.updateTextFields();
+}
+
 function requestListPath(path, params, resultCallback, authErrorCallback) {
   var p = {
     password: params.password || null,
